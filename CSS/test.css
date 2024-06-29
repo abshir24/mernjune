@@ -1,0 +1,28 @@
+#parent{
+    outline:dotted red 2px;
+}
+
+#blue{
+    width: 400px;
+    height: 400px; 
+    background-color:blue;
+}
+
+#green{
+    width: 400px;
+    height: 400px; 
+    background-color:green;
+}
+
+h1,a,img{
+    border:solid black 2px;
+    display:inline-block;
+    width:100px;
+}
+
+
+
+
+
+
+
