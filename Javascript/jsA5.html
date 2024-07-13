@@ -1,0 +1,57 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form id="name-form">
+            <label>Name</label><br>
+            <input type="text" id="fullname"><br>
+
+            <label>Email</label><br>
+            <input type="text" id="email"><br>
+
+            <label>Age</label><br>
+            <input type="number" id="age"><br>
+
+            <input type="submit" value="Submit" >
+        </form>
+
+        <div id="output">
+
+        </div>
+
+
+        <script>
+            var nameForm = document.getElementById('name-form')
+
+            // var button = document.getElementById('test')
+
+            // button.addEventListener("click",function(){
+            //     console.log("button was clicked")
+            // })
+
+            
+
+            nameForm.addEventListener('submit', function(){
+                event.preventDefault()
+                
+                let name = document.getElementById('fullname')
+
+                let age = document.getElementById('age')
+
+                let email = document.getElementById('email')
+
+                let output = document.getElementById('output')
+
+                name= "<h1>Name:" + name.value + "</h1>" 
+
+                email = "<h1>Email: " + email.value + "</h1>"
+
+                age = "<h1>Age: " + age.value + "</h1>"
+
+                output.innerHTML =  name + email + age
+            })
+            
+        </script>
+    </body>
+</html>
