@@ -2,33 +2,25 @@ import React from 'react';
 
 function Counter(){
    const [counter, setCounter] = React.useState(0)
-   
-   const [name, setName] = React.useState("Tim")
 
-   let updateName = ()=>{
-        let names = ["Tom","Jerry","Sarah","Judy"]
+   let incrementCounter = ()=>{
 
-        setName(names[3])
+        setCounter(counter + 1)
+
    }
 
+   let decrementCounter = ()=>{
 
-   let updateCounter = ()=>{
-
-    setCounter(counter + 1)
+    setCounter(counter - 1)
 
    }
 
    return (
-    <div>
+    <div> 
+        <h1>Counter: {counter} </h1>
 
-        <h1>Name: {name} </h1>
-        
-        <button onClick = {updateName}>Generate Random Name</button> 
-
-
-        {/* <h1>Counter: {counter} </h1>
-        
-        <button onClick = {updateCounter}>+1</button> */}
+        <button onClick = {incrementCounter}> Add 1</button>
+        <button onClick = {decrementCounter}> Subtract 1</button>
     </div>
    )
 }

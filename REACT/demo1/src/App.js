@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import ElementRenderer from './components/ElementRenderer';
 import Counter from './components/Counter';
-import State from './components/State'
+// import State from './components/State'
 
 function ConditionalRenderer(){
   var isVisible = false
@@ -19,8 +19,8 @@ function App() {
 
   return (
     <div>
-      <State/>
-      {/* <Counter/> */}
+      {/* <State/> */}
+      <Counter/>
     </div> 
   );
 }
