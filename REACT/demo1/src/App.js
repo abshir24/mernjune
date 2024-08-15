@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import ElementRenderer from './components/ElementRenderer';
 import Counter from './components/Counter';
+import Effect from './components/Effect'
 // import State from './components/State'
 
 function ConditionalRenderer(){
@@ -21,6 +22,7 @@ function App() {
     <div>
       {/* <State/> */}
       <Counter/>
+      {/* <Effect /> */}
     </div> 
   );
 }
