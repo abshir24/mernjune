@@ -2,8 +2,10 @@ import logo from './logo.svg';
 import './App.css';
 import ElementRenderer from './components/ElementRenderer';
 import Counter from './components/Counter';
-import Effect from './components/Effect'
-// import State from './components/State'
+import Effect from './components/Effect';
+import State from './components/State';
+import Users from './components/Users'
+import { BrowserRouter as Router, Route,Routes } from 'react-router-dom';
 
 function ConditionalRenderer(){
   var isVisible = false
@@ -12,18 +14,24 @@ function ConditionalRenderer(){
 
   return component
 }
+
 function App() {
-  var subscribed = false
-
-
-  var test = subscribed == true ? "Subscribed" : "Subscribe"
+  
 
   return (
-    <div>
-      {/* <State/> */}
-      <Counter/>
-      {/* <Effect /> */}
-    </div> 
+    <Router>
+      <h1>React Router test</h1>
+      
+      <Routes>
+        <Route path='/users/:userid' element = {<Users />} />
+        
+        <Route path='/counter' element = {<Counter />} />
+
+        <Route path='/state' element = {<State />} />
+
+        <Route path='/renderer' element = {<ConditionalRenderer />} />
+      </Routes>
+    </Router>
   );
 }
 
