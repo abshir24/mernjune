@@ -15,12 +15,12 @@ function User(){
     }
    ]  
 
-   let user = users.find((user) => user.id == params.userid)
-   
+   const user = users.find((user) => user.id == params.userid)
+
    return (
     <div>
-       <h1>Users Id : { user.id }</h1>
-       <h1>Users name: { user.name }</h1>
+       <h1>Id: { user.id }</h1>
+       <h1>Name: { user.name }</h1>
     </div>
    )
 }
