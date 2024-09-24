@@ -4,8 +4,8 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { getBooks } from './api/api'
 import BookList from './components/BookList';
-import BookForm from './components/BookForm'
-
+import BookForm from './components/BookForm';
+import EditBookForm from './components/EditBookForm';
 
 function App() {
   const [books, setBooks] =  useState([]);
@@ -25,6 +25,7 @@ function App() {
         <Routes>
           <Route path='/' element = { <BookList books= { books } /> } exact />
           <Route path='/new' element = { <BookForm /> } />
+          <Route path='/edit/:bookid' element = { <EditBookForm /> } />
         </Routes>
       </Router>
     </div>
