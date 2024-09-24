@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { getBooks } from './api/api'
 import BookList from './components/BookList';
+import BookForm from './components/BookForm'
 
 
 function App() {
@@ -22,7 +23,8 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path='/' element = { <BookList books={books} /> } exact />
+          <Route path='/' element = { <BookList books= { books } /> } exact />
+          <Route path='/new' element = { <BookForm /> } />
         </Routes>
       </Router>
     </div>
