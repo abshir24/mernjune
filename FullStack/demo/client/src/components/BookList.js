@@ -16,6 +16,7 @@ function BookList({books}){
                         <td>{book.title}</td>
                         <td>Author:{book.author}</td>
                         <td><Link to={`/edit/${book._id}`}>Edit</Link></td>   
+                        <td><Link to={`/delete/${book._id}`}>Delete</Link></td>   
                     </tr>
                 ))}
             </table>

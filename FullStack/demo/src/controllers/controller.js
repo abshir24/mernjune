@@ -48,12 +48,10 @@ const updateBook = async (req,res) =>{
 
 const deleteBook = async (req,res) =>{
     let id = req.params.id
-
-    let book_index = books.findIndex((book) => book.id == req.params.id)
-
-    books.splice(book_index, 1)
-
-    res.send(books)
+    
+    Book.findByIdAndDelete(id)
+        .then((book) => res.send(book))
+        .catch((err) => console.log(err))
 }
 
 

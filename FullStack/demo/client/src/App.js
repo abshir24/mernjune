@@ -6,6 +6,8 @@ import { getBooks } from './api/api'
 import BookList from './components/BookList';
 import BookForm from './components/BookForm';
 import EditBookForm from './components/EditBookForm';
+import DeleteBook from './components/DeleteBook';
+
 
 function App() {
   const [books, setBooks] =  useState([]);
@@ -26,6 +28,7 @@ function App() {
           <Route path='/' element = { <BookList books= { books } /> } exact />
           <Route path='/new' element = { <BookForm /> } />
           <Route path='/edit/:bookid' element = { <EditBookForm /> } />
+          <Route path='/delete/:bookid' element = { <DeleteBook /> } />
         </Routes>
       </Router>
     </div>

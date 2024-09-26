@@ -12,7 +12,7 @@ app.use(bodyParser.json())
 
 app.use('/', router)
 
-let connectionString =""
+let connectionString ="mongodb+srv://abshirtech24:abshir123@expressa3.qbgye.mongodb.net/?retryWrites=true&w=majority&appName=expressA3"
 
 mongoose.connect(connectionString)
 .then(()=>{
